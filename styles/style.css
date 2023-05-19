@@ -1,3 +1,7 @@
+:root {
+    --color_white: white;
+}
+
 * {
     font-family:'Courier New', Courier, monospace
 }
@@ -7,7 +11,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    background-color: rgb(83, 83, 83);
 }
+
+/* .content_holder style will be used to remove redundant styling 
+.content_holder {
+
+} */
 
 /* styles used for the header */
 header {
@@ -15,26 +26,45 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    width: 100%;
 }
 
 header #header_title {
     font-size: 36px;
     font-weight: 900;
     text-align: center;
+
+    color: var(--color_white);
 }
 
 header #header_synopsis {
     font-size: 24px;
     font-weight: 800;
     text-justify: inter-word;
+
+    color: var(--color_white);
 }
 
 /* styles used for the main body of snippet boxes */
 main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
     height: 750px;
     width: 100%;
 
-    border-style: dotted;
+    border-style: dashed;
+}
+
+main .snippet_box {
+    height: 200px;
+    width: 500px;
+
+    margin: 10px;
+
+    border-style: dashed;
 }
 
 /* styles used for the footer  */
@@ -49,4 +79,6 @@ footer #footer_title {
     font-size: 24px;
     font-weight: 800;
     text-justify: inter-word;
+
+    color: var(--color_white);
 }
